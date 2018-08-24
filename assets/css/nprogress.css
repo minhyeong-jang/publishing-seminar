@@ -1,0 +1,80 @@
+/* Make clicks pass-through */
+#nprogress {
+    pointer-events: none;
+  }
+  
+  #nprogress .bar {
+    background: #29d;
+    position: absolute;
+    z-index: 1031;
+    top: 48%;
+    left: 0;
+    width: 120px;
+    height: 5px;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  /* Fancy blur effect */
+  #nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    /* box-shadow: 0 0 10px #5A5F28, 0 0 5px #F5F3BF; */
+    opacity: 1.0;
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+  }
+  
+  /* Remove these to get rid of the spinner */
+  #nprogress .spinner {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 15px;
+    right: 15px;
+  }
+  
+  #nprogress .spinner-icon {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+  
+    border: solid 2px transparent;
+    border-top-color: #29d;
+    border-left-color: #29d;
+    border-radius: 50%;
+  
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+            animation: nprogress-spinner 400ms linear infinite;
+  }
+  
+  .nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .nprogress-custom-parent #nprogress .spinner,
+  .nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+  }
+  
+  @-webkit-keyframes nprogress-spinner {
+    0%   { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes nprogress-spinner {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  #nprogress{z-index: 999999;position: fixed;top: 50%;width: 120px;overflow: hidden;height: 5px;left: 50%;margin-left: -60px;margin-top: 0px;}
+  #nprogress .bar{background-color: #b1986a;height: 5px;}
+  @media only screen and (max-width: 480px) {
+      #nprogress{top:48vh;top: 50%;margin-top: -18px;}
+      body.loading{height:100vh;}
+      #nprogress .bar{top:0}
+  }
