@@ -11,14 +11,20 @@
   <link rel="stylesheet" href="assets/css/tab.css">
   <link rel="stylesheet" href="assets/css/nprogress.css">
   <link rel="stylesheet" href="assets/css/common.css">
-  
+</head>
+
+<body onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false">
+  {% include menu.html %}
+  {% include navbar.html %}
+  {{ content }}
   <!-- Script -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="/assets/js/jquery.cycle2.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.cycle2.min.js"></script>
   <script type="text/javascript" src="http://www.unexpect.kr/js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://www.unexpect.kr/js/jquery.mousewheel.min.js"></script>
   <script type="text/javascript" src="http://www.unexpect.kr/js/jquery.cycle2.carousel.min.js"></script>
   <script type="text/javascript" src="http://www.unexpect.kr/js/jquery.form.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
   <script type="text/javascript" charset="utf-8" src="http://www.unexpect.kr/appjs/web.js"></script>
   <script type="text/javascript" charset="utf-8" src="http://www.unexpect.kr/appjs/nprogress.js"></script>
   <!-- /Script -->
@@ -27,11 +33,5 @@
       gnbMove('0');
     });
   </script>
-</head>
-
-<body onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false">
-  {% include menu.html %}
-  {% include navbar.html %}
-  {{ content }}
 </body>
 </html>
