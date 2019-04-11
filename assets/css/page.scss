@@ -365,16 +365,16 @@ body, html, #content, .page {
 			margin-right: 25px;
 			height: calc(50vh);
 			&:nth-child(1) {
-				background-image: url('/assets/images/happy-ending.png');
+				background-image: url('../images/happy-ending.png');
 			}
 			&:nth-child(2) {
-				background-image: url('/assets/images/1min-shop.png');
+				background-image: url('../images/1min-shop.png');
 			}
 			&:nth-child(3) {
-				background-image: url('/assets/images/recoart.png');
+				background-image: url('../images/recoart.png');
 			}
 			&:nth-child(4) {
-				background-image: url('/assets/images/livesem.png');
+				background-image: url('../images/livesem.png');
 			}
 			&:last-child {
 				margin-right: 0;
